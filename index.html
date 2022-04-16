@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Sudoku</title>
+</head>
+<body>
+    <main>
+        <div id="sudoku-container">
+            <div id="sudoku-options">
+                <div>
+                    <p>Slow Mode</p>
+                    <input type="checkbox" id="slow-mode">
+                </div>
+                <div>
+                    <p>Prefill Time (between each cell)</p>
+                    <input type="number" value="10" id="fill-time">
+                </div>
+                <button id="launch-fill" onclick="sudokuSolver()">Launch fill</button>
+                <button onclick="resetGrid()">Reset</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

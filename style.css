@@ -1,0 +1,94 @@
+body, span, p, a, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Calibri, sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+    background-color: #1e1e1e;
+}
+
+#sudoku-container {
+    width: 600px;
+    margin: 150px auto 0 auto;
+}
+
+#sudoku-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 3px;
+}
+
+#sudoku-options > div {
+    display: flex;
+}
+
+#sudoku-options input{
+    width: 50px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+
+#sudoku-options input[type=checkbox] {
+    width: auto;
+    transform: scale(1.5);
+}
+
+#sudoku {
+    width: 600px;
+    height: 600px;
+    background-color: gray;
+    border-collapse: collapse;
+}
+
+#sudoku colgroup,
+#sudoku tbody {
+    border: solid medium;
+}
+
+#sudoku td {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border: solid thin;
+    text-align: center;
+    cursor: default;
+    font-size: 3em;
+}
+
+#sudoku input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Calibri, sans-serif;
+    font-size: 1em;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-align: center;
+}
+
+#sudoku input:hover {
+    cursor: pointer;
+}
+
+#sudoku input:disabled {
+    cursor: default;
+    color: black;
+}
