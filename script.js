@@ -122,7 +122,7 @@ const HasPrefillNumber = function() {
     }
 }
 
-const isNumberInRow = function(numberToTest = numberToTest3D, verifyGrid) {
+const isNumberInRow = function(numberToTest = numberToTest3D) {
     let square = 0 + Math.floor(numberToTest.square / 3) * 3;
     for (let i = 0; i < length / 3; i++) {
         if (square === numberToTest.square) {
@@ -136,14 +136,14 @@ const isNumberInRow = function(numberToTest = numberToTest3D, verifyGrid) {
     return false;
 }
 
-const isNumberInCol = function(numberToTest = numberToTest3D, verifyGrid) {
+const isNumberInCol = function(numberToTest = numberToTest3D) {
     let square = 0 + numberToTest.square % 3;
     let i = 0;
     while (i < length / 3) {
         if ((square === numberToTest.square && square < 6)) {
             square += 3;
         }
-        else if (grid[square][i][numberToTest.col] === numberToTest.number && !verifyGrid) {
+        else if (grid[square][i][numberToTest.col] === numberToTest.number) {
             return true;
         } else if (i % 3 === 2 && square < 6) {
             square += 3;
